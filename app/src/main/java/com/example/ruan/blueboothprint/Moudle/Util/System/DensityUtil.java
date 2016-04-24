@@ -110,6 +110,13 @@ public class DensityUtil {
         view.setLayoutParams(params);
     }
 
+    public static void setRelWidthCenter(View view, int width , int id) {
+        RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.MATCH_PARENT, RelativeLayout.LayoutParams.WRAP_CONTENT);
+        params.addRule(id);
+        params.width = width;
+        view.setLayoutParams(params);
+    }
+
 
     /**
      * 设置Relayou布局的高度
@@ -141,6 +148,12 @@ public class DensityUtil {
         RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
         params.width = width;
         params.height = height;
+        view.setLayoutParams(params);
+    }
+
+    public static void setRelatWidth(View view , int width){
+        RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+        params.width = width;
         view.setLayoutParams(params);
     }
 

@@ -2,6 +2,7 @@ package com.example.ruan.blueboothprint.Controller;
 
 import android.annotation.TargetApi;
 import android.bluetooth.BluetoothDevice;
+import android.graphics.Bitmap;
 import android.os.Build;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -18,6 +19,7 @@ import android.widget.TextView;
 import com.example.administrator.boothprint.R;
 import com.example.ruan.blueboothprint.Moudle.Adapter.ListViewAdapter;
 import com.example.ruan.blueboothprint.Moudle.Bluetooth.BluetoothServer;
+import com.example.ruan.blueboothprint.Moudle.Bluetooth.Print.HandlerBitmap;
 import com.example.ruan.blueboothprint.Moudle.Bluetooth.Print.VoucherF;
 import com.example.ruan.blueboothprint.Moudle.Util.AdapterData;
 import com.example.ruan.blueboothprint.Moudle.Util.CommonIntent;
@@ -165,7 +167,12 @@ public class BluetoothSetting extends BaseActivity implements Animation.Animatio
                 break;
             case R.id.bluetoothPrint:
                 //重新保存一份凭证
-                new FilePrint().FileSaveTxt(Consignee.name + ".png" , PATH.SaveFile , ImageTransformation.Bitmap2Byte(Consignee.bitmap));
+                if (DrawName.nameBitmap != null) {
+                    Bitmap bitmap = VoucherF.getVoucherF(VoucherF.compressPic(HandlerBitmap.Readpixel(DrawName.nameBitmap), 100, 50), Consignee.bitmap);
+                    new FilePrint().FileSaveTxt(Consignee.name + ".png", PATH.SaveFile, ImageTransformation.Bitmap2Byte(bitmap));
+                }else{
+                    new FilePrint().FileSaveTxt(Consignee.name + ".png", PATH.SaveFile, ImageTransformation.Bitmap2Byte(Consignee.bitmap));
+                }
 
 //                Log.e("Ruan" , "width--" + Consignee.bitmap.getWidth() + "height--" + Consignee.bitmap.getHeight());
                 //输出打印即是，将字节流传输给另一个蓝牙设备
@@ -278,6 +285,11 @@ public class BluetoothSetting extends BaseActivity implements Animation.Animatio
     @Override
     protected void onRestart() {
         super.onRestart();
-        bluetoothVoucherPic.setImageBitmap(Consignee.bitmap);
+        if (DrawName.nameBitmap != null) {
+            Bitmap bitmap = VoucherF.getVoucherF(VoucherF.compressPic(HandlerBitmap.Readpixel(DrawName.nameBitmap), 100, 50), Consignee.bitmap);
+            bluetoothVoucherPic.setImageBitmap(bitmap);
+        }else{
+            bluetoothVoucherPic.setImageBitmap(Consignee.bitmap);
+        }
     }
 }

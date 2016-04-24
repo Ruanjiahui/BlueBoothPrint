@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <Button
+        android:id="@+id/recevingButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/button_selector_blue"
+        android:padding="10dp"
+        android:text="@string/bluesettingName"
+        android:textColor="@color/ColorWhite"
+        android:textSize="15sp"
+        android:visibility="gone"/>
+
+
+    <ImageView
+        android:id="@+id/recevingImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/recevingButton" />
+
+
+    <RelativeLayout
+        android:id="@+id/recevingRelative"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:id="@+id/recevingBackground"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:alpha="0.7"
+            android:background="@color/ColorBlack"
+            android:orientation="horizontal">
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/recevingCenter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="horizontal">
+
+
+            <EditText
+                android:id="@+id/recevingEdit"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="8"
+                android:background="@drawable/edit"
+                android:hint="请输入单号"
+                android:inputType="number"
+                android:padding="5dp"
+                android:textColor="@color/ColorBlue"
+                android:textSize="15sp" />
+
+            <Button
+                android:id="@+id/recevingEnter"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:background="@drawable/button_selector_blue"
+                android:padding="5dp"
+                android:text="@string/bluesettingName"
+                android:textColor="@color/ColorWhite"
+                android:textSize="15sp" />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

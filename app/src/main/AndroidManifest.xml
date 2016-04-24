@@ -37,6 +37,7 @@
         <activity android:name="com.example.ruan.blueboothprint.Controller.Register" />
         <activity android:name="com.example.ruan.blueboothprint.Controller.BluetoothSetting" />
         <activity android:name="com.example.ruan.blueboothprint.Controller.DrawName" />
+        <activity android:name="com.example.ruan.blueboothprint.Controller.Receiving"/>
     </application>
 
 </manifest>

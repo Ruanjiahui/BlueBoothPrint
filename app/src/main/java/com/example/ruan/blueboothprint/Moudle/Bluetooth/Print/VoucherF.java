@@ -5,6 +5,7 @@ import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.graphics.Rect;
+import android.util.Log;
 
 import com.example.administrator.boothprint.R;
 import com.example.ruan.blueboothprint.Controller.Consignee;
@@ -20,7 +21,7 @@ import com.google.zxing.BarcodeFormat;
 public class VoucherF {
 
     private static int CWidth = 500, CHeight = 1500;
-    private static int Nameheight = 0;
+    private static int Nameheight = 1260;
 
     public static Bitmap getVocher(Context context, Form formContent) {
         int TextSize = 0;
@@ -160,9 +161,17 @@ public class VoucherF {
         //发货人的签名
         if (nbitmap != null)
             canvas.drawBitmap(nbitmap, 80, Nameheight, paint);
+
+
+        return obitmap;
+    }
+
+    public static Bitmap getVocherFSend(Bitmap nbitmap, Bitmap obitmap) {
+        Canvas canvas = new Canvas(obitmap);
+        Paint paint = new Paint();
         //收件人的签名
-//        if (nbitmap != null)
-//            canvas.drawBitmap(nbitmap, 80 + CWidth / 2, Nameheight , paint);
+        if (nbitmap != null)
+            canvas.drawBitmap(nbitmap, 80 + CWidth / 2, Nameheight, paint);
 
         return obitmap;
     }

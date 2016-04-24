@@ -118,7 +118,7 @@ public class DrawName extends Activity implements OnClickListener {
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.buttonEnter:
-                Consignee.bitmap = VoucherF.getVoucherF(VoucherF.compressPic(HandlerBitmap.Readpixel(baseBitmap), 100, 50), Consignee.bitmap);
+                DrawName.nameBitmap = baseBitmap;
                 finish();
                 break;
             case R.id.buttonRester:

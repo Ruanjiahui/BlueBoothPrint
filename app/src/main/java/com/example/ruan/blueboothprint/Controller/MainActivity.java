@@ -112,8 +112,8 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
         list.add(AdapterData.getMap("到达入库", ImageTransformation.Resouce2Drawable(context, R.mipmap.conpany), DensityUtil.dip2px(context, 120)));
         list.add(AdapterData.getMap("运单估价", ImageTransformation.Resouce2Drawable(context, R.mipmap.peice), DensityUtil.dip2px(context, 120)));
         list.add(AdapterData.getMap("网点今日", ImageTransformation.Resouce2Drawable(context, R.mipmap.net), DensityUtil.dip2px(context, 120)));
-        list.add(AdapterData.getMap("发货签单", ImageTransformation.Resouce2Drawable(context, R.mipmap.ic_launcher), DensityUtil.dip2px(context, 120)));
-        list.add(AdapterData.getMap("接货签单", ImageTransformation.Resouce2Drawable(context, R.mipmap.ic_launcher), DensityUtil.dip2px(context, 120)));
+        list.add(AdapterData.getMap("发货签单", ImageTransformation.Resouce2Drawable(context, R.mipmap.send), DensityUtil.dip2px(context, 120)));
+        list.add(AdapterData.getMap("接货签单", ImageTransformation.Resouce2Drawable(context, R.mipmap.take), DensityUtil.dip2px(context, 120)));
         list.add(AdapterData.getMap("扫码单据", ImageTransformation.Resouce2Drawable(context, R.mipmap.scan), DensityUtil.dip2px(context, 120)));
 
         mainGridView.setAdapter(new ListViewAdapter(context, list, "GridView"));
@@ -129,13 +129,24 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
         ArrayList<ImageView> viewpagerList = new ArrayList<>();
         for (int i = 0; i < 3; i++) {
             ImageView imageView = new ImageView(context);
-            imageView.setImageDrawable(ImageTransformation.Resouce2Drawable(context, R.mipmap.ic_launcher));
+            switch (i) {
+                case 0:
+                    imageView.setBackground(ImageTransformation.Resouce2Drawable(context, R.mipmap.a001));
+                    break;
+                case 1:
+                    imageView.setBackground(ImageTransformation.Resouce2Drawable(context, R.mipmap.a002));
+                    break;
+                case 2:
+                    imageView.setBackground(ImageTransformation.Resouce2Drawable(context, R.mipmap.a003));
+                    break;
+            }
+
             viewpagerList.add(imageView);
         }
 
         mainViewpager.setAdapter(new ViewPagerAdapter(viewpagerList));
         mainViewpager.setCurrentItem(0);
-        DensityUtil.setHeight(mainViewpager, height / 5);
+        DensityUtil.setHeight(mainViewpager, height / 4);
         DensityUtil.setLinearSize(mainDrawerLinear, width / 2, height);
         //设置Viewpager滑动的速度
         try {
@@ -213,8 +224,10 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
                             CommonIntent.IntentActivity(context, Consignee.class);
                             break;
                         case 6:
+                            CommonIntent.IntentActivity(context, Receiving.class , "Take");
                             break;
                         case 7:
+                            CommonIntent.IntentActivity(context, Receiving.class , "Send");
                             break;
                         case 8:
                             CommonIntent.IntentActivity(context, Qcode.class);
@@ -232,13 +245,12 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
             HandlerMainUI(1);
             map = mainHandler.isUserLoad();
             LoadState = 1;
-        }
-        else
+        } else
             HandlerMainUI(0);
 
     }
 
-    private void HandlerMainUI(int State){
+    private void HandlerMainUI(int State) {
         if (State == 0)
             drawerText.setText("....");
         else
