@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="horizontal"
+    android:clickable="false">
+
+    <LinearLayout
+        android:id="@+id/register_linear"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:background="@drawable/edit"
+        android:gravity="center"
+        android:visibility="visible"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/register_edit"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:background="@drawable/edit"
+            android:hint="请输入你的手机号"
+            android:inputType="number"
+            android:maxLength="11"
+            android:padding="15dp"
+            android:singleLine="true"
+            android:textColor="@color/ColorBlue"
+            android:textColorHint="@color/ColorBlue"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/register_but"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/button_down_blue"
+            android:clickable="false"
+            android:enabled="false"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="获取验证码"
+            android:textColor="@color/ColorWhite"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/register_passwordLinear"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:layout_margin="20dp">
+
+        <EditText
+            android:id="@+id/register_editPassword1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edit"
+            android:hint="请输入新密码"
+            android:inputType="textPassword"
+            android:padding="15dp"
+            android:singleLine="true"
+            android:textColor="@color/ColorBlue"
+            android:textColorHint="@color/ColorBlue"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/register_editPassword2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/edit"
+            android:hint="请再一次输入新密码"
+            android:inputType="textPassword"
+            android:padding="15dp"
+            android:singleLine="true"
+            android:textColor="@color/ColorBlue"
+            android:textColorHint="@color/ColorBlue"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+</LinearLayout>

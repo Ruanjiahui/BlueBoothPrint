@@ -1,0 +1,30 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/ColorWhite">
+
+    <ImageView
+        android:id="@+id/drawImageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <Button
+        android:id="@+id/buttonEnter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="确定"
+        android:textColor="@color/ColorWhite"
+        android:textSize="16sp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"/>
+
+    <Button
+        android:id="@+id/buttonRester"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="重写"
+        android:textColor="@color/ColorWhite"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@id/buttonEnter"
+        android:textSize="16sp" />
+</RelativeLayout>

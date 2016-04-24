@@ -1,0 +1,95 @@
+<resources>
+    <string name="app_name">BoothPrint</string>
+    <string name="nav">标题</string>
+    <string name="nav_1">首页</string>
+    <string name="nav_2">首页</string>
+    <string name="nav_3">我的</string>
+    <string name="more">更多</string>
+    <string name="sample_str">文字</string>
+    <string name="back">上一页</string>
+    <string name="warning">警告</string>
+    <string name="bluetooth">是否开启蓝牙</string>
+    <string name="cancal">取消</string>
+    <string name="center">确定</string>
+    <string name="enter">开启</string>
+    <string name="address">新增地址</string>
+    <string name="name">名字 : </string>
+    <string name="phone">手机号 : </string>
+    <string name="updateaddress">地址 : </string>
+    <string name="newaddress">请输入新地址</string>
+    <string name="newname">请输入新名字</string>
+    <string name="newphone">请输入新电话</string>
+    <string name="addressBut">保存</string>
+    <string name="qcode">扫描二维码/条形码</string>
+    <string name="print">打印</string>
+    <string name="bluesettingName">签名</string>
+
+
+    <string name="Toname">收件人 : </string>
+    <string name="Fromname">发件人 : </string>
+    <string name="Toaddress">收件地址 : </string>
+    <string name="Fromaddress">发件地址 : </string>
+
+
+    <string name="consigneeGoodsname">品名</string>
+    <string name="consigneeGoodsnameEdit">请输入品名</string>
+    <string name="consigneeGoodsweight">重量</string>
+    <string name="consigneeGoodsweightEdit">请输入货物重量</string>
+    <string name="consigneeGoodsvolume">体积</string>
+    <string name="consigneeGoodsvolumeEdit">请输入货物体积</string>
+    <string name="consigneeGoodspack">包装</string>
+    <string name="consigneeGoodspackEdit">请输入包装</string>
+
+    <string name="consigneeCostservice">服务费</string>
+    <string name="consigneeCostserviceEdit">请输入服务费</string>
+    <string name="consigneeCostDelivery">送货费</string>
+    <string name="consigneeCostDeliveryEdit">请输入送货费</string>
+    <string name="consigneeCosttransfer">中转费</string>
+    <string name="consigneeCosttransferEdit">请输入中转费</string>
+    <string name="consigneeCostLoading">落地费</string>
+    <string name="consigneeCostLoadingEdit">请输入落地费</string>
+    <string name="consigneeCosttake">提货费</string>
+    <string name="consigneeCosttakeEdit">请输入提货费</string>
+    <string name="consigneeCostOther">其他费</string>
+    <string name="consigneeCostOtherEdit">请输入其他费</string>
+    <string name="consigneeGoodsType">收件类型</string>
+    <string name="consigneePickType">取货方式</string>
+    <string name="consigneeStateType">发货状态</string>
+    <string name="consigneePayType">付款方式</string>
+    <string name="consigneePayStateType">付款状态</string>
+
+    <string name="VoucherName">打印凭证</string>
+    <string name="BillName">打印货单</string>
+    <string name="updateConvider">省份</string>
+    <string name="updateCity">城市</string>
+
+
+
+
+    <string-array name="bottomType">
+        <item>普通</item>
+        <item>快件</item>
+    </string-array>
+
+    <string-array name="bottomPick">
+        <item>送货</item>
+        <item>自提</item>
+    </string-array>
+
+    <string-array name="bottomState">
+        <item>正常发货</item>
+        <item>等通知</item>
+    </string-array>
+
+    <string-array name="bottomPay">
+        <item>现付</item>
+        <item>到付</item>
+        <item>定期结算</item>
+        <item>回单付</item>
+    </string-array>
+
+    <string-array name="bottomPayState">
+        <item>已结款</item>
+        <item>未付款</item>
+    </string-array>
+</resources>

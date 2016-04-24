@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/ColorWhiteSmoke">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <ImageView
+                    android:id="@+id/bluetoothVoucherPic"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp" />
+
+                <Button
+                    android:id="@+id/bluetoothName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/bluetoothVoucherPic"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/button_selector_blue"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="@string/bluesettingName"
+                    android:textColor="@color/ColorWhite"
+                    android:textSize="15sp" />
+
+
+                <!-- 打印凭证-->
+                <RelativeLayout
+                    android:id="@+id/bluetoothVoucherReltive"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dp"
+                    android:layout_below="@id/bluetoothName"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/whitetosrokeselector">
+
+                    <TextView
+                        android:id="@+id/bluetoothVoucherName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:layout_alignParentLeft="true"
+                        android:gravity="center_vertical"
+                        android:text="@string/VoucherName"
+                        android:textColor="@color/ColorBlack"
+                        android:textSize="15sp" />
+
+                    <ImageView
+                        android:id="@+id/bluetoothVoucherImage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:src="@mipmap/right1" />
+
+                    <TextView
+                        android:id="@+id/bluetoothVoucherContent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:layout_marginRight="5dp"
+                        android:layout_toLeftOf="@id/bluetoothVoucherImage"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/ColorBlack"
+                        android:textSize="15sp" />
+                </RelativeLayout>
+
+                <!-- 打印货单-->
+                <RelativeLayout
+                    android:id="@+id/bluetoothBillReltive"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dp"
+                    android:layout_below="@id/bluetoothVoucherReltive"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/whitetosrokeselector">
+
+                    <TextView
+                        android:id="@+id/bluetoothBillName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:layout_alignParentLeft="true"
+                        android:gravity="center_vertical"
+                        android:text="@string/BillName"
+                        android:textColor="@color/ColorBlack"
+                        android:textSize="15sp" />
+
+                    <ImageView
+                        android:id="@+id/bluetoothBillImage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:src="@mipmap/right1" />
+
+                    <TextView
+                        android:id="@+id/bluetoothBillContent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:layout_marginRight="5dp"
+                        android:layout_toLeftOf="@id/bluetoothBillImage"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/ColorBlack"
+                        android:textSize="15sp" />
+                </RelativeLayout>
+
+
+                <TextView
+                    android:id="@+id/bluetoothPrint"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/bluetoothBillReltive"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/button_selector_blue"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="@string/print"
+                    android:textColor="@color/ColorWhite"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/consigneeBackground"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:alpha="0.7"
+        android:background="@color/ColorBlack" />
+
+    <!-- 点击弹出下面的布局-->
+    <include
+        android:id="@+id/bottomMain"
+        layout="@layout/bottom_main"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" />
+
+</RelativeLayout>

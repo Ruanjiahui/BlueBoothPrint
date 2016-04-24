@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/ColorWhiteSmoke"
+    android:orientation="vertical">
+
+    <!-- 地址姓名的布局-->
+    <LinearLayout
+        android:id="@+id/updateNameLinear"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="@color/ColorWhite"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:gravity="center_vertical"
+            android:text="@string/name"
+            android:textColor="@color/ColorBlack"
+            android:textSize="15sp" />
+
+        <EditText
+            android:id="@+id/addressName"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/edit"
+            android:hint="@string/newname"
+            android:padding="5dp"
+            android:textColor="@color/ColorBlack"
+            android:textColorHint="@color/ColorBlue"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <!-- 地址电话的布局文件-->
+    <LinearLayout
+        android:id="@+id/updatePhoneLinear"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/updateNameLinear"
+        android:layout_marginTop="1dp"
+        android:background="@color/ColorWhite"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:gravity="center_vertical"
+            android:text="@string/phone"
+            android:textColor="@color/ColorBlack"
+            android:textSize="15sp" />
+
+        <EditText
+            android:id="@+id/addressPhone"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/edit"
+            android:hint="@string/newphone"
+            android:inputType="number"
+            android:maxLength="11"
+            android:padding="5dp"
+            android:textColor="@color/ColorBlack"
+            android:textColorHint="@color/ColorBlue"
+            android:textSize="15sp" />
+
+    </LinearLayout>
+
+    <!-- 选择省份的布局文件-->
+    <RelativeLayout
+        android:id="@+id/updateConviderLinear"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/updatePhoneLinear"
+        android:layout_marginTop="1dp"
+        android:background="@drawable/whitetosrokeselector"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp">
+
+        <TextView
+            android:id="@+id/updateConviderTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentLeft="true"
+            android:gravity="center_vertical"
+            android:text="@string/updateConvider"
+            android:textColor="@color/ColorBlack"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:id="@+id/updateConviderImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/right1" />
+
+        <TextView
+            android:id="@+id/updateConviderContent"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_marginRight="5dp"
+            android:layout_toLeftOf="@id/updateConviderImage"
+            android:gravity="center_vertical"
+            android:textColor="@color/ColorBlack"
+            android:textSize="15sp" />
+    </RelativeLayout>
+
+
+    <!-- 选择城市的布局文件-->
+    <RelativeLayout
+        android:id="@+id/updateCityLinear"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/updateConviderLinear"
+        android:layout_marginTop="1dp"
+        android:background="@drawable/whitetosrokeselector"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp">
+
+        <TextView
+            android:id="@+id/updateCityTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentLeft="true"
+            android:gravity="center_vertical"
+            android:text="@string/updateCity"
+            android:textColor="@color/ColorBlack"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:id="@+id/updateCityImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/right1" />
+
+        <TextView
+            android:id="@+id/updateCityContent"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_marginRight="5dp"
+            android:layout_toLeftOf="@id/updateCityImage"
+            android:gravity="center_vertical"
+            android:textColor="@color/ColorBlack"
+            android:textSize="15sp" />
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:id="@+id/updateAddressLinear"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/updateCityLinear"
+        android:layout_marginTop="1dp"
+        android:background="@color/ColorWhite"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:gravity="center_vertical"
+            android:text="@string/updateaddress"
+            android:textColor="@color/ColorBlack"
+            android:textSize="15sp" />
+
+        <EditText
+            android:id="@+id/addressAddress"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/edit"
+            android:hint="@string/newaddress"
+            android:padding="5dp"
+            android:textColor="@color/ColorBlack"
+            android:textColorHint="@color/ColorBlue"
+            android:textSize="15sp" />
+
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/addressBut"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/updateAddressLinear"
+        android:layout_margin="5dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/button_selector_blue"
+        android:padding="5dp"
+        android:text="@string/addressBut"
+        android:textColor="@color/ColorWhite"
+        android:textSize="15sp" />
+
+    <RelativeLayout
+        android:id="@+id/updateBackground"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:alpha="0.7"
+        android:background="@color/ColorBlack" />
+
+    <!-- 点击弹出下面的布局-->
+    <include
+        android:id="@+id/updatebottomMain"
+        layout="@layout/bottom_main"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" />
+
+</RelativeLayout>

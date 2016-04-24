@@ -1,0 +1,715 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/consignee"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <!-- 这个是收件人的布局-->
+                <RelativeLayout
+                    android:id="@+id/consigneeToLinear"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:background="@drawable/buttonsaveselector">
+
+                    <ImageView
+                        android:id="@+id/consigneeToImage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_margin="5dp"
+                        android:src="@mipmap/local" />
+
+                    <ImageView
+                        android:id="@+id/consigneeToRightImage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_margin="5dp"
+                        android:src="@mipmap/right1" />
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_margin="5dp"
+                        android:layout_toLeftOf="@id/consigneeToRightImage"
+                        android:layout_toRightOf="@id/consigneeToImage"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginBottom="5dp">
+
+                            <TextView
+                                android:id="@+id/consigneeToname"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/Toname"
+                                android:textColor="@color/ColorBlack"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:id="@+id/consigneeTophone"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginRight="5dp"
+                                android:textColor="@color/ColorBlack"
+                                android:textSize="16sp" />
+
+                        </RelativeLayout>
+
+                        <TextView
+                            android:id="@+id/consigneeToaddress"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/Toaddress"
+                            android:textColor="@color/ColorBlack"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <!-- 这个是发件人的布局-->
+                <RelativeLayout
+                    android:id="@+id/consigneeFromLinear"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/consigneeToLinear"
+                    android:background="@drawable/buttonsaveselector">
+
+                    <ImageView
+                        android:id="@+id/consigneeFromImage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_margin="5dp"
+                        android:src="@mipmap/local" />
+
+                    <ImageView
+                        android:id="@+id/consigneeFromRightImage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_margin="5dp"
+                        android:src="@mipmap/right1" />
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_margin="5dp"
+                        android:layout_toLeftOf="@id/consigneeFromRightImage"
+                        android:layout_toRightOf="@id/consigneeFromImage"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginBottom="5dp">
+
+                            <TextView
+                                android:id="@+id/consigneeFromname"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/Fromname"
+                                android:textColor="@color/ColorBlack"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:id="@+id/consigneeFromphone"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginRight="5dp"
+                                android:textColor="@color/ColorBlack"
+                                android:textSize="16sp" />
+                        </RelativeLayout>
+
+                        <TextView
+                            android:id="@+id/consigneeFromaddress"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/Fromaddress"
+                            android:textColor="@color/ColorBlack"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <!-- 货件的名称-->
+                <LinearLayout
+                    android:id="@+id/consigneeGoogs"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dp"
+                    android:layout_below="@id/consigneeFromLinear"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/ColorWhite"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="@string/consigneeGoodsname"
+                        android:textColor="@color/ColorBlack"
+                        android:textSize="15sp" />
+
+                    <EditText
+                        android:id="@+id/consigneeGoodsname"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:background="@drawable/edit"
+                        android:gravity="center_vertical"
+                        android:hint="@string/consigneeGoodsnameEdit"
+                        android:padding="5dp"
+                        android:layout_marginRight="5dp"
+                        android:textColor="@color/ColorBlack"
+                        android:textColorHint="@color/ColorBlue"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="@string/consigneeGoodspack"
+                        android:textColor="@color/ColorBlack"
+                        android:textSize="15sp" />
+
+                    <EditText
+                        android:id="@+id/consigneeGoodspack"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:background="@drawable/edit"
+                        android:gravity="center_vertical"
+                        android:hint="@string/consigneeGoodspackEdit"
+                        android:padding="5dp"
+                        android:layout_marginRight="5dp"
+                        android:textColor="@color/ColorBlack"
+                        android:textColorHint="@color/ColorBlue"
+                        android:textSize="15sp" />
+                </LinearLayout>
+
+                <!-- 货件的重量-->
+                <LinearLayout
+                    android:id="@+id/consigneeWeight"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dp"
+                    android:layout_below="@id/consigneeGoogs"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@color/ColorWhite"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="@string/consigneeGoodsweight"
+                        android:textColor="@color/ColorBlack"
+                        android:textSize="15sp" />
+
+                    <EditText
+                        android:id="@+id/consigneeGoodsweight"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:background="@drawable/edit"
+                        android:gravity="center_vertical"
+                        android:hint="@string/consigneeGoodsweightEdit"
+                        android:padding="5dp"
+                        android:layout_marginRight="5dp"
+                        android:textColor="@color/ColorBlack"
+                        android:textColorHint="@color/ColorBlue"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="@string/consigneeGoodsvolume"
+                        android:textColor="@color/ColorBlack"
+                        android:textSize="15sp" />
+
+                    <EditText
+                        android:id="@+id/consigneeGoodsvolume"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:background="@drawable/edit"
+                        android:gravity="center_vertical"
+                        android:hint="@string/consigneeGoodsvolumeEdit"
+                        android:padding="5dp"
+                        android:layout_marginRight="5dp"
+                        android:textColor="@color/ColorBlack"
+                        android:textColorHint="@color/ColorBlue"
+                        android:textSize="15sp" />
+                </LinearLayout>
+
+                <!-- 货物类型-->
+                <RelativeLayout
+                    android:id="@+id/consigneeGoodsTypeRelative"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dp"
+                    android:layout_below="@id/consigneeWeight"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/whitetosrokeselector">
+
+                    <TextView
+                        android:id="@+id/consigneeGoodsType"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:layout_alignParentLeft="true"
+                        android:gravity="center_vertical"
+                        android:text="@string/consigneeGoodsType"
+                        android:textColor="@color/ColorBlack"
+                        android:textSize="15sp" />
+
+                    <ImageView
+                        android:id="@+id/consigneeGoodsTypeimage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:src="@mipmap/right1"
+                        android:layout_centerVertical="true"/>
+
+                    <TextView
+                        android:id="@+id/consigneeGoodsTypename"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:layout_marginRight="5dp"
+                        android:layout_toLeftOf="@id/consigneeGoodsTypeimage"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/ColorBlack"
+                        android:textSize="15sp" />
+                </RelativeLayout>
+
+
+                <!-- 货件的费用-->
+                <LinearLayout
+                    android:id="@+id/consigneeCost"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/consigneeGoodsTypeRelative"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/ColorWhite"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="50dp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:text="@string/consigneeCostservice"
+                            android:textColor="@color/ColorBlack"
+                            android:textSize="15sp" />
+
+                        <EditText
+                            android:id="@+id/consigneeCostservice"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:background="@drawable/edit"
+                            android:gravity="center_vertical"
+                            android:hint="@string/consigneeCostserviceEdit"
+                            android:padding="5dp"
+                            android:layout_marginRight="5dp"
+                            android:inputType="number"
+                            android:textColor="@color/ColorBlack"
+                            android:textColorHint="@color/ColorBlue"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:text="@string/consigneeCostDelivery"
+                            android:textColor="@color/ColorBlack"
+                            android:textSize="15sp" />
+
+                        <EditText
+                            android:id="@+id/consigneeCostDelivery"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:background="@drawable/edit"
+                            android:gravity="center_vertical"
+                            android:hint="@string/consigneeCostDeliveryEdit"
+                            android:padding="5dp"
+                            android:layout_marginRight="5dp"
+                            android:inputType="number"
+                            android:textColor="@color/ColorBlack"
+                            android:textColorHint="@color/ColorBlue"
+                            android:textSize="15sp" />
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="50dp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:text="@string/consigneeCosttransfer"
+                            android:textColor="@color/ColorBlack"
+                            android:textSize="15sp" />
+
+                        <EditText
+                            android:id="@+id/consigneeCosttransfer"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:background="@drawable/edit"
+                            android:gravity="center_vertical"
+                            android:hint="@string/consigneeCosttransferEdit"
+                            android:padding="5dp"
+                            android:layout_marginRight="5dp"
+                            android:inputType="number"
+                            android:textColor="@color/ColorBlack"
+                            android:textColorHint="@color/ColorBlue"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:text="@string/consigneeCostLoading"
+                            android:textColor="@color/ColorBlack"
+                            android:textSize="15sp" />
+
+                        <EditText
+                            android:id="@+id/consigneeCostLoading"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:background="@drawable/edit"
+                            android:gravity="center_vertical"
+                            android:hint="@string/consigneeCostLoadingEdit"
+                            android:padding="5dp"
+                            android:layout_marginRight="5dp"
+                            android:inputType="number"
+                            android:textColor="@color/ColorBlack"
+                            android:textColorHint="@color/ColorBlue"
+                            android:textSize="15sp" />
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="50dp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:text="@string/consigneeCosttake"
+                            android:textColor="@color/ColorBlack"
+                            android:textSize="15sp" />
+
+                        <EditText
+                            android:id="@+id/consigneeCosttake"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:background="@drawable/edit"
+                            android:gravity="center_vertical"
+                            android:hint="@string/consigneeCosttakeEdit"
+                            android:padding="5dp"
+                            android:layout_marginRight="5dp"
+                            android:inputType="number"
+                            android:textColor="@color/ColorBlack"
+                            android:textColorHint="@color/ColorBlue"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:text="@string/consigneeCostOther"
+                            android:textColor="@color/ColorBlack"
+                            android:textSize="15sp" />
+
+                        <EditText
+                            android:id="@+id/consigneeCostOther"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:background="@drawable/edit"
+                            android:gravity="center_vertical"
+                            android:hint="@string/consigneeCostOtherEdit"
+                            android:padding="5dp"
+                            android:layout_marginRight="5dp"
+                            android:inputType="number"
+                            android:textColor="@color/ColorBlack"
+                            android:textColorHint="@color/ColorBlue"
+                            android:textSize="15sp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                <!-- 取货方式-->
+                <RelativeLayout
+                    android:id="@+id/consigneeGoodsPickRelative"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dp"
+                    android:layout_below="@id/consigneeCost"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/whitetosrokeselector">
+
+                    <TextView
+                        android:id="@+id/consigneePickType"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:layout_alignParentLeft="true"
+                        android:gravity="center_vertical"
+                        android:text="@string/consigneePickType"
+                        android:textColor="@color/ColorBlack"
+                        android:textSize="15sp" />
+
+                    <ImageView
+                        android:id="@+id/consigneePickTypeimage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:src="@mipmap/right1" />
+
+                    <TextView
+                        android:id="@+id/consigneePickTypename"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:layout_marginRight="5dp"
+                        android:layout_toLeftOf="@id/consigneePickTypeimage"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/ColorBlack"
+                        android:textSize="15sp" />
+                </RelativeLayout>
+
+
+                <!-- 发货状态-->
+                <RelativeLayout
+                    android:id="@+id/consigneeGoodsStateRelative"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dp"
+                    android:layout_below="@id/consigneeGoodsPickRelative"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/whitetosrokeselector">
+
+                    <TextView
+                        android:id="@+id/consigneeStateType"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:layout_alignParentLeft="true"
+                        android:gravity="center_vertical"
+                        android:text="@string/consigneeStateType"
+                        android:textColor="@color/ColorBlack"
+                        android:textSize="15sp" />
+
+                    <ImageView
+                        android:id="@+id/consigneeStateTypeimage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:src="@mipmap/right1" />
+
+                    <TextView
+                        android:id="@+id/consigneeStateTypename"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:layout_marginRight="5dp"
+                        android:layout_toLeftOf="@id/consigneeStateTypeimage"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/ColorBlack"
+                        android:textSize="15sp" />
+                </RelativeLayout>
+
+
+                <!-- 付款方式-->
+                <RelativeLayout
+                    android:id="@+id/consigneeGoodsPayRelative"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dp"
+                    android:layout_below="@id/consigneeGoodsStateRelative"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/whitetosrokeselector">
+
+                    <TextView
+                        android:id="@+id/consigneePayType"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:layout_alignParentLeft="true"
+                        android:gravity="center_vertical"
+                        android:text="@string/consigneePayType"
+                        android:textColor="@color/ColorBlack"
+                        android:textSize="15sp" />
+
+                    <ImageView
+                        android:id="@+id/consigneePayTypeimage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:src="@mipmap/right1" />
+
+                    <TextView
+                        android:id="@+id/consigneePayTypename"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:layout_marginRight="5dp"
+                        android:layout_toLeftOf="@id/consigneePayTypeimage"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/ColorBlack"
+                        android:textSize="15sp" />
+                </RelativeLayout>
+
+
+                <!-- 付款方式-->
+                <RelativeLayout
+                    android:id="@+id/consigneeGoodsPayStateRelative"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dp"
+                    android:layout_below="@id/consigneeGoodsPayRelative"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/whitetosrokeselector">
+
+                    <TextView
+                        android:id="@+id/consigneePayStateType"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:layout_alignParentLeft="true"
+                        android:gravity="center_vertical"
+                        android:text="@string/consigneePayStateType"
+                        android:textColor="@color/ColorBlack"
+                        android:textSize="15sp" />
+
+                    <ImageView
+                        android:id="@+id/consigneePayStateTypeimage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:src="@mipmap/right1" />
+
+                    <TextView
+                        android:id="@+id/consigneePayStateTypename"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:layout_marginRight="5dp"
+                        android:layout_toLeftOf="@id/consigneePayStateTypeimage"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/ColorBlack"
+                        android:textSize="15sp" />
+                </RelativeLayout>
+
+                <!-- 保存和打印的按钮组-->
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp"
+                    android:layout_below="@id/consigneeGoodsPayStateRelative">
+
+                    <Button
+                        android:id="@+id/consigneeSave"
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:text="保存"
+                        android:gravity="center"
+                        android:textSize="15sp"
+                        android:textColor="@color/ColorBlue"
+                        android:background="@drawable/buttonsaveselector"/>
+
+                    <Button
+                        android:id="@+id/consigneePrint"
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:text="保存并打印"
+                        android:gravity="center"
+                        android:textSize="15sp"
+                        android:textColor="@color/ColorWhite"
+                        android:background="@drawable/buttoncenterselector"/>
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/consigneeBackground"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:alpha="0.7"
+        android:background="@color/ColorBlack" />
+
+    <!-- 点击弹出下面的布局-->
+    <include
+        android:id="@+id/bottomMain"
+        layout="@layout/bottom_main"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" />
+</RelativeLayout>
